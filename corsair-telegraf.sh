@@ -4,11 +4,9 @@ RAW=$(/usr/local/bin/corsairmi)
 OUTPUT=/mnt/user/appdata/telegraf/corsair-telegraf.csv
 
 function simple() {
-#       echo $(echo "$RAW" | grep "$1" | cut -d ':' -f2 | cut -d ' ' -f 2)
-        echo "$RAW" | grep "$1" |  tr -s ' ' | cut -d ':' -f 2 | cut -d ' ' -f 2
+        echo "$RAW" | grep "$1" |  tr -s ' ' | cut -d ':' -f 2 | cut -d ' ' -f 2  | tr -d "'"
 }
 function rail() {
-#       echo "$RAW" | grep -A 3 "output ${1}v" | grep "$2" | tr -s ' ' | cut -d ' ' -f 2
         echo "$RAW" | grep "$1" | grep "$2" | tr -s ' ' |  cut -d ' ' -f 3
 }
 
