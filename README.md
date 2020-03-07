@@ -33,4 +33,9 @@ output2 amps:     1.2
 output2 watts:    4.0`
 ```
 
+Sample output:
+```
+power_supply,model=RM750i,vendor=CORSAIR temp_0=50.8,temp_1=42.8,total_time=21483318,uptime=3378918,supply_volts=230.0,total_watts=158.0 12v_volts=12.1,12v_amps=9.5,12v_watts=114.0,5v_volts=5.0,5v_amps=8.1,5v_watts=40.0,3.3v_volts=3.3,3.3v_amps=1.3,3.3v_watts=4.0 1583601060427175139
+```
+
 I am still working on this and its only partially complete/working. Telegraf is sending the file to Influxdb but its only getting showing the measurement/tag but I havent got the fields to populate. 
